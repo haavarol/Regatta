@@ -1,5 +1,5 @@
-import Link from 'next/link'
 import './globals.css'
+import Header from './header'
 
 export const metadata = {
   title: 'Regatta',
@@ -14,11 +14,9 @@ export default function RootLayout({
   return (
     <html lang="nb">
       <body>
-        <nav>
-          <Link href="/">Home </Link>
-          <Link href="/dashboard">Dashboard</Link>
-        </nav>
-        {children}
+        {/* @ts-expect-error Server Component */}
+        <Header />
+        <main>{children}</main>
       </body>
     </html>
   )
