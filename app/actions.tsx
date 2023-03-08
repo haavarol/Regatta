@@ -12,7 +12,7 @@ export function SignOut() {
 
 export function SignIn() {
   return (
-    <button className={styles.buttonPrimary} onClick={() => signIn("google")}>
+    <button className={styles.buttonPrimary} onClick={() => signIn()}>
       Sign in
     </button>
   )
