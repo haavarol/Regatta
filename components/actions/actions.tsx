@@ -1,6 +1,5 @@
-"use client"
 import { signIn, signOut } from "next-auth/react"
-import styles from "./header.module.css"
+import styles from "../header/header.module.css"
 
 export function SignOut() {
   return (

@@ -1,9 +1,9 @@
-import { getServerSession } from "next-auth/next"
-import { SignIn, SignOut } from "./actions"
+import { useSession } from "next-auth/react"
+import { SignIn, SignOut } from "../actions/actions"
 import styles from "./header.module.css"
 
-export default async function Header() {
-  const session = await getServerSession()
+export default function Header() {
+  const {data: session} = useSession()
 
   return (
     <header className={styles.signedInStatus}>
